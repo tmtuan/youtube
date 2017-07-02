@@ -35,7 +35,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+        return CGSize(width: view.frame.width, height: height + 16 + 68)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -77,20 +79,22 @@ class VideoCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = UIColor.purple
+        label.text = "Tiffany Alvord"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let subtitleTextView: UITextView = {
         let textview = UITextView()
-        textview.backgroundColor = UIColor.red
+        textview.text = "All about the bass cover * 1,234,233,356 views - 2 years ago"
         textview.translatesAutoresizingMaskIntoConstraints = false
+        textview.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
+        textview.textColor = UIColor.lightGray
         return textview
     }()
     
     func setupViews() {
-        backgroundColor = UIColor.gray
+
         addSubview(thumbnailImageView)
         addSubview(separatorView)
         addSubview(userProfileImageView)
@@ -122,7 +126,7 @@ class VideoCell: UICollectionViewCell {
         
         // Subtitle Textview's Constraints
         // top constraints
-        addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 8)])
+        addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 4)])
         
         // left constraint
         addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8)])
