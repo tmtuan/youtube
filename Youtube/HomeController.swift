@@ -57,14 +57,24 @@ class VideoCell: UICollectionViewCell {
         return imageView
     }()
     
+    let separatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.black
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     func setupViews() {
         backgroundColor = UIColor.gray
         addSubview(thumbnailImageView)
+        addSubview(separatorView)
         
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView]))
-        
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView]))
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": separatorView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": separatorView]))
         
         thumbnailImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         
