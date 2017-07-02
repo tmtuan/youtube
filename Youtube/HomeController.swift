@@ -52,7 +52,7 @@ class VideoCell: UICollectionViewCell {
     
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
+        
         imageView.image = UIImage(named: "tiffany_alvord")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -61,7 +61,7 @@ class VideoCell: UICollectionViewCell {
     
     let userProfileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.green
+        
         imageView.image = UIImage(named:"tiffany_alvord_profile")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 22
