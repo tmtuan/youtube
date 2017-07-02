@@ -75,12 +75,20 @@ class VideoCell: UICollectionViewCell {
         return label
     }()
     
+    let subtitleTextView: UITextView = {
+        let textview = UITextView()
+        textview.backgroundColor = UIColor.red
+        textview.translatesAutoresizingMaskIntoConstraints = false
+        return textview
+    }()
+    
     func setupViews() {
         backgroundColor = UIColor.gray
         addSubview(thumbnailImageView)
         addSubview(separatorView)
         addSubview(userProfileImageView)
         addSubview(titleLabel)
+        addSubview(subtitleTextView)
         
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
         
@@ -105,7 +113,19 @@ class VideoCell: UICollectionViewCell {
         // height constraint
         addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20)])
         
-      
+        // Subtitle Textview's Constraints
+        // top constraints
+        addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 8)])
+        
+        // left constraint
+        addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8)])
+        
+        // right constraint
+        addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .right, relatedBy: .equal, toItem: titleLabel, attribute: .right, multiplier: 1, constant: 0)])
+        
+        // height constraint
+        addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20)])
+
         
     }
     required init?(coder aDecoder: NSCoder) {
