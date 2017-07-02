@@ -16,6 +16,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         navigationItem.title = "Home"
         collectionView?.backgroundColor = UIColor.white
+        navigationController?.navigationBar.isTranslucent = false
         
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
     
@@ -73,7 +74,7 @@ class VideoCell: UICollectionViewCell {
     
     let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
         return view
     }()
     
