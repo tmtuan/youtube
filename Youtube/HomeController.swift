@@ -63,6 +63,9 @@ class VideoCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.green
         imageView.image = UIImage(named:"tiffany_alvord_profile")
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 22
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
