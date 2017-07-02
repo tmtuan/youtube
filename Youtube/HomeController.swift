@@ -60,6 +60,7 @@ class VideoCell: UICollectionViewCell {
     let userProfileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.green
+        imageView.image = UIImage(named:"tiffany_alvord_profile")
         return imageView
     }()
     
