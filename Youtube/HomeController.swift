@@ -14,7 +14,8 @@ class HomeController: UICollectionViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.backgroundColor = UIColor.red
+        navigationItem.title = "Home"
+        collectionView?.backgroundColor = UIColor.white
     }
 
     
