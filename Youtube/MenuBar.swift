@@ -56,3 +56,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         return 0
     }
 }
+
+class MenuCell: BaseCell {
+   
+}
