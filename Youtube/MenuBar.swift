@@ -8,17 +8,22 @@
 
 import UIKit
 
-class MenuBar: UIView {
+class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    let collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor.init(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+        cv.dataSource = self
+        cv.delegate = self
         return cv
     }()
     
+    let cellId = "cellId"
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         
         addSubview(collectionView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
@@ -29,5 +34,17 @@ class MenuBar: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        
+        cell.backgroundColor = UIColor.blue
+        return cell
     }
 }
