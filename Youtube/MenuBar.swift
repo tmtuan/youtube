@@ -20,6 +20,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }()
     
     let cellId = "cellId"
+    let imageNames = ["home", "square", "star", "hd"]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -42,9 +44,10 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
         
-       
+        cell.imageView.image = UIImage(named: imageNames[indexPath.item])
+        
         return cell
     }
     
@@ -59,11 +62,21 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
 
 class MenuCell: BaseCell {
    
+    let imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: "home")
+        iv.tintColor = UIColor.init(red: 91, green: 14, blue: 13, alpha: 1)
+        return iv
+    }()
+    
     override func setupViews() {
         super.setupViews()
         
-        backgroundColor = UIColor.yellow
+        addSubview(imageView)
+        addConstraintsWithFormat(format: "H:[v0(28)]", views: imageView)
+        addConstraintsWithFormat(format: "V:[v0(28)]", views: imageView)
         
-        
+        addConstraints([NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)])
+        addConstraints([NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
     }
 }

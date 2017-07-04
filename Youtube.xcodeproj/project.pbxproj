@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE3009C61F0BE6A20022E7A7 /* hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C21F0BE6A20022E7A7 /* hd.png */; };
+		DE3009C71F0BE6A20022E7A7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C31F0BE6A20022E7A7 /* home.png */; };
+		DE3009C81F0BE6A20022E7A7 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C41F0BE6A20022E7A7 /* square.png */; };
+		DE3009C91F0BE6A20022E7A7 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C51F0BE6A20022E7A7 /* star.png */; };
 		DE48DD0D1F0A76B400B9AB9A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48DD0C1F0A76B400B9AB9A /* MenuBar.swift */; };
 		DE4AC0CB1F0883D30075D136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC0CA1F0883D30075D136 /* AppDelegate.swift */; };
 		DE4AC0CD1F0883D30075D136 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC0CC1F0883D30075D136 /* HomeController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE3009C21F0BE6A20022E7A7 /* hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hd.png; path = ../../../../Pictures/icons/hd.png; sourceTree = "<group>"; };
+		DE3009C31F0BE6A20022E7A7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../Pictures/icons/home.png; sourceTree = "<group>"; };
+		DE3009C41F0BE6A20022E7A7 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = ../../../../Pictures/icons/square.png; sourceTree = "<group>"; };
+		DE3009C51F0BE6A20022E7A7 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../../../Pictures/icons/star.png; sourceTree = "<group>"; };
 		DE48DD0C1F0A76B400B9AB9A /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		DE4AC0C71F0883D30075D136 /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4AC0CA1F0883D30075D136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +50,10 @@
 			children = (
 				DE4AC0C91F0883D30075D136 /* Youtube */,
 				DE4AC0C81F0883D30075D136 /* Products */,
+				DE3009C21F0BE6A20022E7A7 /* hd.png */,
+				DE3009C31F0BE6A20022E7A7 /* home.png */,
+				DE3009C41F0BE6A20022E7A7 /* square.png */,
+				DE3009C51F0BE6A20022E7A7 /* star.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,7 +140,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AC0D51F0883D30075D136 /* LaunchScreen.storyboard in Resources */,
+				DE3009C71F0BE6A20022E7A7 /* home.png in Resources */,
+				DE3009C61F0BE6A20022E7A7 /* hd.png in Resources */,
 				DE4AC0D21F0883D30075D136 /* Assets.xcassets in Resources */,
+				DE3009C91F0BE6A20022E7A7 /* star.png in Resources */,
+				DE3009C81F0BE6A20022E7A7 /* square.png in Resources */,
 				DE4AC0D01F0883D30075D136 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
