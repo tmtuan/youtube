@@ -46,7 +46,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
         
-        cell.imageView.image = UIImage(named: imageNames[indexPath.item])
+        cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
+        
+        cell.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
         
         return cell
     }
@@ -64,8 +66,8 @@ class MenuCell: BaseCell {
    
     let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "home")
-        iv.tintColor = UIColor.init(red: 91, green: 14, blue: 13, alpha: 1)
+        iv.image = UIImage(named: "home")?.withRenderingMode(.alwaysTemplate)
+        iv.tintColor = UIColor.init(red: 91/255, green: 14/255, blue: 13/255, alpha: 1)
         return iv
     }()
     
