@@ -30,6 +30,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     
         setupMenuBar()
+        setupNavbarButtons()
     }
     
     let menuBar: MenuBar = {
@@ -44,6 +45,18 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
     }
 
+    func setupNavbarButtons() {
+        
+        let searchImage = UIImage(named: "search_icon")?.withRenderingMode(.alwaysOriginal)
+        let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch))
+        navigationItem.rightBarButtonItems = [searchBarButtonItem]
+        
+    }
+    
+    func handleSearch() {
+        print("searching")
+    }
+    
     
     // MARK: - UICollectionView methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
