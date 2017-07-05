@@ -11,13 +11,20 @@ import UIKit
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var videos: [Video] = {
+        
+       var tiffanyChannel = Channel()
+       tiffanyChannel.name = "Tiffany Alvord channel"
+       tiffanyChannel.profileImageName = "tiffanychannel_profile"
+        
        var blankSpaceVideo = Video()
        blankSpaceVideo.title = "Tiffany Alvord - Blank space"
        blankSpaceVideo.thumbnailImageName = "tiffany_alvord"
+       blankSpaceVideo.channel  = tiffanyChannel
        
        var tiffany2Video = Video()
        tiffany2Video.title = "Tiffany Alvord - All about the bass"
        tiffany2Video.thumbnailImageName = "tiffany_alvord_2"
+       tiffany2Video.channel = tiffanyChannel
         
        return [blankSpaceVideo, tiffany2Video]
     }()
@@ -126,6 +133,8 @@ class VideoCell: BaseCell {
         didSet {
             titleLabel.text = video?.title
             thumbnailImageView.image = UIImage(named: (video?.thumbnailImageName)!)
+            
+            userProfileImageView.image = UIImage(named: (video?.channel?.profileImageName)!)
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  Video.swift
+//  Channel.swift
 //  Youtube
 //
 //  Created by Tran Minh Tuan on 7/5/17.
@@ -8,11 +8,7 @@
 
 import UIKit
 
-
-class Video: NSObject {
-    
-    var thumbnailImageName: String?
-    var title: String?
-    
-    var channel: Channel?
+class Channel: NSObject {
+    var name: String?
+    var profileImageName: String?
 }

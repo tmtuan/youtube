@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE0547CF1F0D169600531D40 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0547CE1F0D169600531D40 /* Video.swift */; };
+		DE0547D11F0D1E2900531D40 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0547D01F0D1E2900531D40 /* Channel.swift */; };
 		DE3009C61F0BE6A20022E7A7 /* hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C21F0BE6A20022E7A7 /* hd.png */; };
 		DE3009C71F0BE6A20022E7A7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C31F0BE6A20022E7A7 /* home.png */; };
 		DE3009C81F0BE6A20022E7A7 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C41F0BE6A20022E7A7 /* square.png */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		DE0547CE1F0D169600531D40 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		DE0547D01F0D1E2900531D40 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		DE3009C21F0BE6A20022E7A7 /* hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hd.png; path = ../../../../Pictures/icons/hd.png; sourceTree = "<group>"; };
 		DE3009C31F0BE6A20022E7A7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../Pictures/icons/home.png; sourceTree = "<group>"; };
 		DE3009C41F0BE6A20022E7A7 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = ../../../../Pictures/icons/square.png; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0547CE1F0D169600531D40 /* Video.swift */,
+				DE0547D01F0D1E2900531D40 /* Channel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AC0CD1F0883D30075D136 /* HomeController.swift in Sources */,
+				DE0547D11F0D1E2900531D40 /* Channel.swift in Sources */,
 				DE0547CF1F0D169600531D40 /* Video.swift in Sources */,
 				DE4AC0CB1F0883D30075D136 /* AppDelegate.swift in Sources */,
 				DE48DD0D1F0A76B400B9AB9A /* MenuBar.swift in Sources */,
