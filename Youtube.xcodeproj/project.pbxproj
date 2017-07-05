@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0547CF1F0D169600531D40 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0547CE1F0D169600531D40 /* Video.swift */; };
 		DE3009C61F0BE6A20022E7A7 /* hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C21F0BE6A20022E7A7 /* hd.png */; };
 		DE3009C71F0BE6A20022E7A7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C31F0BE6A20022E7A7 /* home.png */; };
 		DE3009C81F0BE6A20022E7A7 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3009C41F0BE6A20022E7A7 /* square.png */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0547CE1F0D169600531D40 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		DE3009C21F0BE6A20022E7A7 /* hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hd.png; path = ../../../../Pictures/icons/hd.png; sourceTree = "<group>"; };
 		DE3009C31F0BE6A20022E7A7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../Pictures/icons/home.png; sourceTree = "<group>"; };
 		DE3009C41F0BE6A20022E7A7 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = ../../../../Pictures/icons/square.png; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0547CD1F0D167100531D40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE0547CE1F0D169600531D40 /* Video.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		DE4AC0BE1F0883D30075D136 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		DE4AC0C91F0883D30075D136 /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				DE0547CD1F0D167100531D40 /* Model */,
 				DE4AC0CA1F0883D30075D136 /* AppDelegate.swift */,
 				DE4AC0CC1F0883D30075D136 /* HomeController.swift */,
 				DE4AC0CE1F0883D30075D136 /* Main.storyboard */,
@@ -157,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AC0CD1F0883D30075D136 /* HomeController.swift in Sources */,
+				DE0547CF1F0D169600531D40 /* Video.swift in Sources */,
 				DE4AC0CB1F0883D30075D136 /* AppDelegate.swift in Sources */,
 				DE48DD0D1F0A76B400B9AB9A /* MenuBar.swift in Sources */,
 			);
