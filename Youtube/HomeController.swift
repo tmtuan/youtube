@@ -13,7 +13,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var videos: [Video] = {
        var blankSpaceVideo = Video()
        blankSpaceVideo.title = "Tiffany Alvord - Blank space"
-       blankSpaceVideo.thumbnailImageName = "tiffany_alvord_profile"
+       blankSpaceVideo.thumbnailImageName = "tiffany_alvord"
+       
+       var tiffany2Video = Video()
+       tiffany2Video.title = "Tiffany Alvord - All about the bass"
+       tiffany2Video.thumbnailImageName = "tiffany_alvord_2"
+        
+       return [blankSpaceVideo, tiffany2Video]
     }()
 
     override func viewDidLoad() {
@@ -77,9 +83,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
         
-        
+        cell.video = videos[indexPath.item]
         
         return cell
     }
@@ -116,6 +122,12 @@ class BaseCell: UICollectionViewCell {
 
 class VideoCell: BaseCell {
     
+    var video: Video? {
+        didSet {
+            titleLabel.text = video?.title
+            thumbnailImageView.image = UIImage(named: (video?.thumbnailImageName)!)
+        }
+    }
     
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
