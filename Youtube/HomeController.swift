@@ -20,11 +20,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
        blankSpaceVideo.title = "Tiffany Alvord - Blank space"
        blankSpaceVideo.thumbnailImageName = "tiffany_alvord"
        blankSpaceVideo.channel  = tiffanyChannel
+       blankSpaceVideo.numberOfViews = 123456789012
        
        var tiffany2Video = Video()
-       tiffany2Video.title = "Tiffany Alvord - All about the bass"
+       tiffany2Video.title = "Tiffany Alvord - All about the bass Cover version"
        tiffany2Video.thumbnailImageName = "tiffany_alvord_2"
        tiffany2Video.channel = tiffanyChannel
+       tiffany2Video.numberOfViews = 433450345111
         
        return [blankSpaceVideo, tiffany2Video]
     }()
@@ -136,6 +138,18 @@ class VideoCell: BaseCell {
             
             if let profileImageName = video?.channel?.profileImageName {
                 userProfileImageView.image = UIImage(named: profileImageName)
+                
+               
+            }
+            
+            if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
+                
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                
+                
+                let subtitleText = "\(channelName) * \(numberFormatter.string(from: numberOfViews) ?? "") * 2 years ago"
+                subtitleTextView.text = subtitleText
             }
             
         }
@@ -170,6 +184,7 @@ class VideoCell: BaseCell {
         let label = UILabel()
         label.text = "Tiffany Alvord"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 2 
         return label
     }()
     
@@ -213,7 +228,7 @@ class VideoCell: BaseCell {
         addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0)])
         
         // height constraint
-        addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20)])
+        addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 44)])
         
         // Subtitle Textview's Constraints
         // top constraints
