@@ -49,12 +49,19 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         let searchImage = UIImage(named: "search_icon")?.withRenderingMode(.alwaysOriginal)
         let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch))
-        navigationItem.rightBarButtonItems = [searchBarButtonItem]
+        
+        let moreBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu_more_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMoreMenu))
+        
+        navigationItem.rightBarButtonItems = [searchBarButtonItem, moreBarButtonItem]
         
     }
     
     func handleSearch() {
         print("searching")
+    }
+    
+    func handleMoreMenu() {
+        print("More")
     }
     
     
