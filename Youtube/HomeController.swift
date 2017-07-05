@@ -9,6 +9,12 @@
 import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var videos: [Video] = {
+       var blankSpaceVideo = Video()
+       blankSpaceVideo.title = "Tiffany Alvord - Blank space"
+       blankSpaceVideo.thumbnailImageName = "tiffany_alvord_profile"
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +73,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // MARK: - UICollectionView methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return videos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
