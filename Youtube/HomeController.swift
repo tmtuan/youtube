@@ -134,7 +134,10 @@ class VideoCell: BaseCell {
             titleLabel.text = video?.title
             thumbnailImageView.image = UIImage(named: (video?.thumbnailImageName)!)
             
-            userProfileImageView.image = UIImage(named: (video?.channel?.profileImageName)!)
+            if let profileImageName = video?.channel?.profileImageName {
+                userProfileImageView.image = UIImage(named: profileImageName)
+            }
+            
         }
     }
     
